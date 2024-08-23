@@ -19,6 +19,9 @@ body {
   padding: 27px;
   margin-bottom: 158px;
 }
+.nav__label{
+  display: none;
+}
 .logo {
   font-size: 30px;
   font-weight: 700;
@@ -225,40 +228,85 @@ body {
   text-decoration: none;
   color: #21243D;
 }
-/* responsive */
-@media (max-width: 768px) {
-  .header__container,
-  .main__container,
-  .section__container,
-  .feat__item,
-  .footer__networks {
-    flex-direction: column;
-    align-items: center;
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .main__container {
+    gap: 80px;
+  }
+
+  .header__container {
+    padding: 20px;
+  }
+
+  .nav .nav__list {
     gap: 20px;
   }
-  @media (max-width: 480px) {
-    .header__container,
-    .main__container,
-    .section__container,
-    .feat__item,
-    .footer__networks {
-      padding: 10px;
-    }
-    @media (max-width: 768px) {
-      .header__container,
-      .main__container,
-      .section__container,
-      .feat__item,
-      .footer__networks {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-      }
-      @media (max-width: 480px) {
-        .header__container,
-        .main__container,
-        .section__container,
-        .feat__item,
-        .footer__networks {
-          padding: 10px;
-        }    
+}
+
+@media (max-width: 992px) {
+  .header__container {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .main__container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .main__left h1 {
+    font-size: 36px;
+  }
+
+  .nav .nav__list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sec__left {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .recent__container, .section__container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .view__all {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .recent__section {
+    height: auto;
+    padding: 15px;
+  }
+
+  .feat__item {
+    flex-direction: column;
+  }
+  
+  .feat__item img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 15px;
+  }
+  .header__container .nav{
+    display: none;
+  }
+  .nav__label{
+    display: block;
+  }
+  #nav-hide-show:checked + .nav{
+    display: block;
+  }
+}
